@@ -1,0 +1,258 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit--text-size-adjust: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.blue {
+    --bg-color: #00466B;
+    --c2: #0086AD;
+    --nav-color: #00C2C7;
+    --c4: #97EBDB;
+    --text: rgb(0, 0, 0);
+}
+
+.light {
+    --bg-color: rgb(241, 239, 232, 0.9);
+    --c2: #A8A098;
+    --nav-color: rgb(131, 126, 121);
+    --c4: rgb(87, 84, 80);
+    --text: #1A1817;
+}
+
+.dark {
+    --text: rgba(255, 255, 255, 1);
+    --c4: #A8A098;
+    --nav-color: rgb(97, 94, 90);
+    --c2: rgb(82, 79, 76);
+    --bg-color: #1A1817;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text);
+    transition: background 500ms ease-in-out, color 600ms ease-in-out;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(34, 34, 34, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(132, 0, 255, 0.7);
+}
+
+.Container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 35px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Navbar {
+    position: fixed;
+    height: 100%;
+    background-color: var(--nav-color);
+}
+
+.Navbar-nav {
+    list-style-type: none;
+    position: fixed;
+    background-color: var(--nav-color);
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 5rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items img {
+    width: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    align-self: center;
+}
+
+.nav-items {
+    align-self: center;
+    padding-left: 15%;
+    width: 100%;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+.time #time {
+    height: 56.8px;
+}
+
+#timeZone {
+    color: var(--text);
+    font-size: 1rem;
+    background-color: var(--c2);
+    border-radius: 8px;
+    padding: 0.2rem 0.5rem ;
+    width: max-content;
+    font-weight: bolder;
+}
+
+.nav-items:last-child {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.Container .content a {
+    background-color: var(--c2);
+    text-decoration: none;
+    color: inherit;
+}
+
+.Container .content {
+    padding-left: 5rem;
+}
+
+.content {
+    display: grid;
+    grid-gap: 2.5%;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    white-space: wrap;
+}
+
+.card:hover {
+    box-shadow: 1px 10px 10px -10px rgba(0, 0, 24, 0.5);
+}
+
+.card-inside {
+    display: flex;
+    white-space: wrap;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    flex-flow: row wrap;
+    padding: 3%;
+    overflow: initial;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-content: flex-start;
+    background-color: transparent;
+}
+
+.icon img {
+    margin-top: 2px;
+    width: 50%;
+    height: 55%;
+}
+
+.heading {
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    font-weight: 900;
+    font-size: 1.3em;
+    margin-top: 2px;
+}
+
+.description {
+    font-family: 'Baloo Chettan 2';
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+.content, .header {
+    padding: 0 4% 0 4%;
+}
+
+@media only screen and (max-width: 720px) {
+    .content, .header {
+        padding: 0 1% 0 1%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+   
+    .content {
+        grid-gap: 1.5%;
+        grid-template-columns: repeat(auto-fill, minmax(142.16px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(220px, 250px));
+    }
+
+}
+
+.icon #icon-logo-star {
+    width: 50%;
+    height: 50%;
+    fill: #ff8a00;
+}
+/* ----------------------from_animate.css_by_Daniel Eden------------------------- */
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+  }
+  /* ------------------------------------------------------------------------- */
+  
