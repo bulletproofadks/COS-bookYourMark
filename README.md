@@ -14,3 +14,10 @@ https://bulletproofadks.github.io/COS-bookYourMark/
 
 # Bonus:
 ==> click on the laugh emoji to get amazed in different ways every time .
+==> links will be updated regularly.
+==> more links to come.
+
+_________________________________________________________________________________________________
+Soon, in next update you will be able to add your own sites as well.
+__________________________________________________________________________________________________
+
