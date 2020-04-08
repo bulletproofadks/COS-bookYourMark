@@ -1,5 +1,5 @@
 # COS-bookYourMark
-Are u sick of your congested bookmark tab? Don't worry just pin this site on your browser.
+Are u sick of your congested bookmark tab? Don't worry just pin this site on your browser or on home screen.
 
 # What is this ?
 ==> Simple site which shows our daily sites.
